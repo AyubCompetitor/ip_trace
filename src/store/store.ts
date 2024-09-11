@@ -8,12 +8,13 @@ import { ip_api } from '../shared/api/Ip/ip.api';
 import { IpInfo, NotFoundFallbackStatuses } from '../shared/models/models';
 import { transformIpResponseData } from '../shared/utils/transformIpResponseData';
 
-
-
 interface UseStore {
     ipInfo: undefined | IpInfo,
+    query: string,
+    lonLat: number[];
     fallBackStatus: undefined | NotFoundFallbackStatuses,
-    getIpInfo: (ip: string) => void,
+    setQuery: (query: string) => void,
+    getIpInfo: (ip?: string) => void,
 }
 
 const useStore = create<UseStore>()(
@@ -22,11 +23,18 @@ const useStore = create<UseStore>()(
 
             /* state */
             ipInfo: undefined,
+            query: '',
+            lonLat: [0, 0],
             fallBackStatus: undefined,
 
             /* setters */
+            setQuery(query) {
+                set((state) => {
+                    state.query = query;
+                });
+            },
 
-            getIpInfo: async (ip: string) => {
+            getIpInfo: async (ip = '') => {
                 const { getIPInfo } = ip_api;
                 const responseData = await getIPInfo({ ip });
 
@@ -37,6 +45,8 @@ const useStore = create<UseStore>()(
                     })
                     : set((state) => {
                         state.fallBackStatus = undefined
+                        state.query = responseData.query || ip;
+                        state.lonLat = responseData.lon && responseData.lat ? [responseData.lon, responseData.lat] : state.lonLat;
                         state.ipInfo = transformIpResponseData(responseData)
                     });
             },

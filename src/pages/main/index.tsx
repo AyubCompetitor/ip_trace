@@ -8,7 +8,7 @@ import SearchIp from '../../widgets/searchIp/searchIp';
 
 const Main = () => {
     const { t } = useTranslation();
-
+    
     return (
         <MainWrapper>
             <HeaderWithLogo icon={<GlobeSvg />} gap={20} text={t('main.header.ip')} />

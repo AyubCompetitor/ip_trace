@@ -3,6 +3,12 @@
         "header": {
             "ip": "IP Trace",
             "contacts": "Contacts"
+        },
+        "input": {
+            "btnTitle": "SEARCH IP"
+        },
+        "result": {
+            "errorTitle": "Check the validity of the entered IP address"
         }
     }
 }

@@ -1,12 +1,13 @@
-import { Flex, FlexProps } from "antd";
 import React from "react";
+import { StyledEqualBlocksFlex } from "./styleds";
+import { FlexProps } from "antd";
 
-interface EqualBlocksFlexProps extends FlexProps {
+export interface EqualBlocksFlexProps extends FlexProps {
   children: React.ReactNode;
 }
 
 const EqualBlocksFlex = (props: EqualBlocksFlexProps) => (
-  <Flex {...props}>{props.children}</Flex>
+  <StyledEqualBlocksFlex {...props}>{props.children}</StyledEqualBlocksFlex>
 );
 
 export default EqualBlocksFlex;
