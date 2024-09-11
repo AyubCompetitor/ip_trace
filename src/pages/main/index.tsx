@@ -11,7 +11,7 @@ const Main = () => {
 
     return (
         <MainWrapper>
-            <HeaderWithLogo icon={<GlobeSvg />} text={t('main.header.ip')} />
+            <HeaderWithLogo icon={<GlobeSvg />} gap={20} text={t('main.header.ip')} />
             <MainContent>
                 <SearchIp />
                 <DescriptionsWithMap />

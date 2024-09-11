@@ -1,16 +1,19 @@
-import GenericInput from '../../shared/ui/input/input';
-import useSearchIp from './useSearchIp';
+import { Flex } from "antd";
+import GenericInput from "../../shared/ui/input/input";
+import useSearchIp from "./useSearchIp";
 
 const SearchIp = () => {
-    const { getIpInfoHandler } = useSearchIp();
+  const { getIpInfoHandler } = useSearchIp();
 
-    return (
-        <GenericInput
-            type='search'
-            enterButton='Search'
-            onSearch={getIpInfoHandler}
-        />
-    );
+  return (
+    <Flex justify="center">
+      <GenericInput
+        type="search"
+        enterButton="Search IP"
+        onSearch={getIpInfoHandler}
+      />
+    </Flex>
+  );
 };
 
 export default SearchIp;

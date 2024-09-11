@@ -5,7 +5,7 @@ const useSearchIp = () => {
     const { getIpInfo } = state;
 
     const getIpInfoHandler = (query: string) => getIpInfo(query);
-
+    
     return {
         getIpInfoHandler,
     }

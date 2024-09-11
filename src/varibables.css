@@ -1,6 +1,11 @@
 :root {
-    --header-bg: #868e96;
-    --content-bg: #fafbfb;
+    --common-bg: #222629;
+    --header-bg: #6B6E70;
     --lightText: #ffffff;
     --darkText: #000000;
+    --label-color: #474b4f;
+    --content-color: #6b6e70;
+    --button-bg: #86c232;
+    --button-bg-dark: #61892f;
+
 }

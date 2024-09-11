@@ -7,13 +7,13 @@ export const MainWrapper = styled(Layout)`
     height: 100vh;
     box-sizing: border-box;
     overflow-y: hidden;
+    background-color: var(--common-bg);
 `;
 
 export const MainContent = styled(Content)`  
-    padding: 5% 10%;
+    padding: 2% 10% 2% 10%;
     width: 100%;
     height: 100%;
-    background-color: var(--content-bg);
 
     & .ant-input-group-wrapper {
         margin-bottom: 2%;
