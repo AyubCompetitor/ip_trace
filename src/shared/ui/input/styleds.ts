@@ -7,6 +7,8 @@ export const StyledInput = styled(Input) <{ margin?: string }>``;
 
 export const StyledSearch = styled(Search)`
   width: 70%;
+  min-width: 250px;
+
   &&&& .ant-input {
     color: var(--label-color);
     padding: 0.5rem 1rem;
@@ -15,7 +17,7 @@ export const StyledSearch = styled(Search)`
   }
 
   &&&& .ant-btn {
-    padding: 1.2rem 3rem;
+    padding: 1.2rem 2rem;
     background-color: var(--button-bg);
     margin-left: 15px;
     border: 0;

@@ -1,5 +1,3 @@
-
-
 import { create } from 'zustand';
 import { devtools, } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
@@ -21,13 +19,13 @@ const useStore = create<UseStore>()(
     devtools(
         immer((set) => ({
 
-            /* state */
+            /** state */
             ipInfo: undefined,
             query: '',
             lonLat: [0, 0],
             fallBackStatus: undefined,
 
-            /* setters */
+            /** setters */
             setQuery(query) {
                 set((state) => {
                     state.query = query;

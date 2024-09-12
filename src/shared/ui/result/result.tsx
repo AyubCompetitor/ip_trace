@@ -1,7 +1,8 @@
-import { Result, ResultProps } from 'antd';
+import { ResultProps } from 'antd';
+import { StyledResult } from './styleds';
 
 const GenericResult = (props: ResultProps) => (
-    <Result {...props} />
+    <StyledResult {...props} />
 );
 
 export default GenericResult;

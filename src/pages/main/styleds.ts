@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const MainWrapper = styled(Layout)`  
     width: 100vw;
     height: 100vh;
-    padding: 0 10% 2% 10%;
+    padding: 0 20% 2% 20%;
     box-sizing: border-box;
     overflow-y: hidden;
     background-color: var(--common-bg);
